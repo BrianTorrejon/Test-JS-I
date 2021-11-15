@@ -104,7 +104,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero > 20 && numero <50) {
+  if (numero > 20 && numero < 50) {
     return true;
   }
   return false;
@@ -129,6 +129,18 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    return "fizzbuzz";
+  }
+  if (numero % 5 === 0) {
+    return "buzz";
+  } else if (numero % 3 === 0) {
+    return "fizz";
+  } else {
+    return numero;
+  }
+
+
 }
 
 function operadoresLogicos(num1, num2, num3) {
