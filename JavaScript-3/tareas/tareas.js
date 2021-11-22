@@ -161,8 +161,8 @@ function todosIguales(arreglo) {
   for (let i = 1; i < arreglo.length; i++) {
     if (arreglo[i] !== primero) {
       igual = false;
-    }  
-  }  
+    }
+  }
   return igual;
 }
 
@@ -171,12 +171,29 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  let nuevoArreglo = []
+  if (array.indexOf("Enero") !== -1 && array.indexOf("Marzo") !== -1 && array.indexOf("Noviembre") !== -1) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
+        nuevoArreglo.push(array[i])
+      }
+    }
+    return nuevoArreglo;
+  }
+  return "No se encontraron los meses pedidos"
 }
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  let mayores = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 100) {
+      mayores.push(array[i]);
+    }
+  }
+  return mayores;
 }
 
 // No modificar nada debajo de esta línea, de lo contrario no correrán los test.
